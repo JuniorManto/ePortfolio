@@ -987,13 +987,20 @@
     document.querySelectorAll('.risk-cell').forEach(cell => {
       cell.addEventListener('click', () => {
         const key = cell.getAttribute('data-risk');
+        const detail = document.getElementById('risk-detail');
+        if (detail.style.display === 'block' && detail.getAttribute('data-active') === key) {
+          detail.style.display = 'none';
+          detail.removeAttribute('data-active');
+          document.querySelectorAll('.risk-cell').forEach(c => c.style.opacity = '1');
+          return;
+        }
         const d = riskData[key];
         document.getElementById('risk-detail-label').textContent = d.label;
         document.getElementById('risk-detail-title').textContent = d.title;
         document.getElementById('risk-detail-rpn').textContent = d.rpn;
         document.getElementById('risk-detail-failure').textContent = d.failure;
         document.getElementById('risk-detail-mitigation').textContent = d.mitigation;
-        const detail = document.getElementById('risk-detail');
+        detail.setAttribute('data-active', key);
         detail.style.display = 'block';
         detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         document.querySelectorAll('.risk-cell').forEach(c => c.style.opacity = '0.45');
