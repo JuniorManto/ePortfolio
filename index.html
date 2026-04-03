@@ -331,12 +331,20 @@
               </div>
             </div>
             <div class="image-placeholder">
-              📊 Insert AWR screenshot here: Noise Figure vs Bias Current comparing N=1 to scaled device (N=24)
-              <p>Caption: Noise figure versus base bias current at 5 GHz. Single-device minimum NF is approximately 7.84 dB; after scaling to 24 fingers the minimum drops to approximately 1.61 to 1.68 dB.</p>
+              <figure style="margin:16px 0;">
+                <img src="lna-noisefigure.png" alt="Noise Figure vs frequency for CE LNA configurations" style="width:100%;border-radius:8px;border:1px solid rgba(123,111,224,0.2);">
+                <figcaption style="font-size:12px;color:#6060aa;margin-top:8px;font-style:italic;text-align:center;">Noise figure versus frequency for three CE LNA configurations at 5 GHz. Pink: no inductors (NF ≈ 1.68 dB). Blue: emitter degeneration only. Red: emitter degeneration plus series base inductor (NF ≈ 1.39 dB). Device scaling to 24 fingers is the single most impactful step before any matching network is added.</figcaption>
+              </figure>
             </div>
             <div class="image-placeholder">
-              📊 Insert AWR screenshot here: S21 gain comparison between the CE LNA (Lab 3) and Cascode LNA (Lab 4)
-              <p>Caption: Gain |S21| versus frequency. The CE LNA achieves 8.67 dB at 5 GHz while the cascode delivers 21.07 dB.</p>
+              <figure style="margin:16px 0;">
+                <img src="lna-gain.png" alt="S21 gain comparison between CE and cascode LNA" style="width:100%;border-radius:8px;border:1px solid rgba(123,111,224,0.2);">
+                <figcaption style="font-size:12px;color:#6060aa;margin-top:8px;font-style:italic;text-align:center;">Gain |S21| versus frequency. The CE LNA (pink, LNA_3_Degen) achieves 8.67 dB at 5 GHz. The cascode LNA (blue) peaks at 21.07 dB at 5 GHz — a 12.4 dB improvement from adding the cascode stage and emitter follower.</figcaption>
+              </figure>
+              <figure style="margin:16px 0;">
+                <img src="lna-schematic.png" alt="Final cascode LNA schematic in AWR" style="width:100%;border-radius:8px;border:1px solid rgba(123,111,224,0.2);">
+                <figcaption style="font-size:12px;color:#6060aa;margin-top:8px;font-style:italic;text-align:center;">Final cascode LNA schematic in AWR Microwave Office. The differential cascode pair (Q1/Q2 and Q3/Q4, each N=12 fingers) is preceded by base inductor LB and emitter inductor LE for input matching, and followed by a resonant tank load and emitter follower output buffer driving the 50 Ω port.</figcaption>
+              </figure>
             </div>
             <div class="star-block">
               <span class="star-label">R — Result</span>
