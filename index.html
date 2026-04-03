@@ -503,8 +503,22 @@
               </div>
             </div>
             <div class="image-placeholder">
-              📷 Insert image here: Preprocessing pipeline stages (Original → Contrast → Otsu mask → Contour)
-              <p>Caption: Four preprocessing stages applied to two contrasting examples showing the Otsu thresholding pipeline.</p>
+              <figure style="margin:16px 0;">
+                <img src="ml-flowchart.jpg" alt="Feature extraction flowchart" style="width:100%;border-radius:8px;border:1px solid rgba(123,111,224,0.2);">
+                <figcaption style="font-size:12px;color:#6060aa;margin-top:8px;font-style:italic;text-align:center;">Flowchart of the 17-feature extraction pipeline. The preprocessing stages (brighten, contrast, greyscale, blur, Otsu binary mask) feed into geometric feature extraction covering bounding box dimensions, contour metrics, circularity, and seven Hu invariant moments.</figcaption>
+              </figure>
+            </div>
+            <div class="image-placeholder">
+              <figure style="margin:16px 0;">
+                <img src="ml-pipeline-white.jpg" alt="Preprocessing pipeline applied to a white 2x1 brick" style="width:100%;border-radius:8px;border:1px solid rgba(123,111,224,0.2);">
+                <figcaption style="font-size:12px;color:#6060aa;margin-top:8px;font-style:italic;text-align:center;">Pipeline failure mode: a white 2x1 brick on a white background. The Otsu threshold fragments the mask because the piece and background have similar intensities, producing an unreliable contour and degraded features — the primary source of remaining classification error.</figcaption>
+              </figure>
+            </div>
+            <div class="image-placeholder">
+              <figure style="margin:16px 0;">
+                <img src="ml-pipeline-dark.jpg" alt="Preprocessing pipeline applied to a dark 2x2 brick" style="width:100%;border-radius:8px;border:1px solid rgba(123,111,224,0.2);">
+                <figcaption style="font-size:12px;color:#6060aa;margin-top:8px;font-style:italic;text-align:center;">Pipeline success case: a dark 2x2 brick with sufficient contrast. Contrast enhancement produces a clean bimodal histogram, Otsu thresholding yields a solid binary mask, and the contour wraps tightly around the piece — yielding reliable geometric features for classification.</figcaption>
+              </figure>
             </div>
             <div class="star-block">
               <span class="star-label">R — Result</span>
