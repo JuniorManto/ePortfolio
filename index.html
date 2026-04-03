@@ -70,7 +70,6 @@
     0% { opacity: 0.8; width: 10px; height: 10px; }
     100% { opacity: 0; width: 3px; height: 3px; }
   }
-  /* NAV */
   .page-nav {
     position: sticky; top: 0;
     background: rgba(5,5,15,0.85);
@@ -86,13 +85,11 @@
     border-right: 1px solid rgba(123,111,224,0.1);
   }
   .page-nav a:hover, .page-nav a.active { color: #c0b8ff; background: rgba(123,111,224,0.1); text-shadow: 0 0 20px rgba(123,111,224,0.8); }
-  /* SECTIONS */
   .page-section { padding: 80px 0; min-height: 100vh; border-bottom: 1px solid rgba(123,111,224,0.1); position: relative; z-index: 1; }
   #about { background: transparent; }
   #project { background: transparent; }
   #reflection { background: transparent; }
   .container { max-width: 900px; margin: 0 auto; padding: 0 40px; }
-  /* LABELS */
   .page-label {
     display: inline-block; background: rgba(123,111,224,0.15); color: #c0b8ff;
     font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
@@ -107,7 +104,6 @@
   .about-divider { width: 48px; height: 1px; background: linear-gradient(90deg, #7b6fe0, transparent); margin: 32px 0; }
   .section-heading { font-family: 'DM Serif Display', serif; font-size: 28px; color: #e0d8ff; margin-bottom: 8px; text-shadow: 0 0 40px rgba(123,111,224,0.5); }
   .section-subheading { font-size: 14px; color: var(--text-light); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 24px; }
-  /* ABOUT HERO */
   .about-hero { display: grid; grid-template-columns: 200px 1fr; gap: 48px; align-items: start; margin-bottom: 56px; }
   .about-photo-placeholder {
     width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, #1a0050, #05050f);
@@ -119,13 +115,11 @@
   .about-name { font-family: 'DM Serif Display', serif; font-size: 48px; color: #e0d8ff; line-height: 1.1; margin-bottom: 6px; text-shadow: 0 0 60px rgba(123,111,224,0.4); }
   .about-title { font-size: 15px; color: #9d94f0; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 20px; }
   .about-bio { font-size: 15px; color: var(--text-muted); line-height: 1.8; max-width: 600px; }
-  /* SKILLS */
   .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 32px 0; }
   .skill-card { background: rgba(13,13,43,0.6); border: 1px solid rgba(123,111,224,0.2); border-top: 1px solid rgba(123,111,224,0.6); padding: 20px; border-radius: 8px; backdrop-filter: blur(10px); }
   .skill-card h4 { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #9d94f0; margin-bottom: 10px; }
   .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
   .skill-tag { background: rgba(123,111,224,0.12); color: #c0b8ff; font-size: 12px; padding: 3px 10px; border-radius: 12px; font-weight: 500; border: 1px solid rgba(123,111,224,0.25); }
-  /* EXPANDABLE PROJECT CARDS */
   .course-projects-grid { display: grid; gap: 12px; margin: 24px 0; }
   .course-card {
     background: rgba(10,10,30,0.7);
@@ -157,7 +151,6 @@
   .course-card-body { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1); border-top: 0px solid var(--warm-gray); }
   .course-card.open .course-card-body { max-height: 9999px; border-top-width: 1px; }
   .course-card-inner { padding: 32px 24px 32px 80px; }
-  /* STAR BLOCKS */
   .star-block { margin-bottom: 32px; }
   .star-block h4 { font-family: 'DM Serif Display', serif; font-size: 20px; color: #e0d8ff; margin-bottom: 10px; }
   .star-block p { font-size: 14px; color: var(--text-muted); line-height: 1.85; margin-bottom: 12px; }
@@ -196,7 +189,6 @@
   .comp-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.07em; }
   .comp-col:first-child .comp-lbl { color: var(--text-light); }
   .comp-col:last-child .comp-lbl { color: rgba(192,184,255,0.5); }
-  /* CAPSTONE */
   .project-hero { background: radial-gradient(ellipse at top left, rgba(50,30,120,0.4) 0%, rgba(5,5,15,0.8) 60%); border: 1px solid rgba(123,111,224,0.2); color: white; padding: 64px 40px; margin: 0 -40px 56px; position: relative; overflow: hidden; border-radius: 8px; }
   .project-hero::before { content: ''; position: absolute; top: -50%; right: -10%; width: 400px; height: 400px; border: 60px solid rgba(123,111,224,0.08); border-radius: 50%; }
   .project-hero-tag { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #9d94f0; font-weight: 600; margin-bottom: 12px; }
@@ -221,21 +213,17 @@
   .image-placeholder-lg p { margin-top: 8px; font-size: 11px; font-style: italic; }
   .tech-pills-lg { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
   .tech-pill-lg { background: rgba(123,111,224,0.12); color: #c0b8ff; font-size: 12px; padding: 5px 14px; border-radius: 12px; font-weight: 500; letter-spacing: 0.04em; border: 1px solid rgba(123,111,224,0.25); }
-  /* CONTACT */
   .contact-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 32px; }
   .contact-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; border-radius: 8px; text-decoration: none; transition: all 0.3s; }
   .btn-primary { background: rgba(123,111,224,0.2); color: #c0b8ff; border: 1px solid rgba(123,111,224,0.5); }
   .btn-primary:hover { background: rgba(123,111,224,0.35); box-shadow: 0 0 20px rgba(123,111,224,0.3); }
   .btn-secondary { background: transparent; color: #c0b8ff; border: 1px solid rgba(123,111,224,0.3); }
   .btn-secondary:hover { background: rgba(123,111,224,0.1); }
-  /* REFLECTION */
   .reflection-intro { font-family: 'DM Serif Display', serif; font-size: 22px; color: #c0b8ff; line-height: 1.5; font-style: italic; border-left: 2px solid rgba(123,111,224,0.6); padding-left: 24px; margin-bottom: 40px; }
   .reflection-q { margin-bottom: 36px; }
   .reflection-q h4 { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #9d94f0; font-weight: 600; margin-bottom: 12px; }
   .reflection-q p { font-size: 15px; color: var(--text-muted); line-height: 1.85; }
   hr.divider { border: none; border-top: 1px solid rgba(123,111,224,0.15); margin: 32px 0; }
-  .word-count { font-size: 12px; color: var(--text-light); font-style: italic; margin-top: 40px; }
-  /* RISK MATRIX */
   .risk-cell { transition: transform 0.2s, box-shadow 0.2s; }
   .risk-cell:hover { transform: scale(1.04); box-shadow: 0 0 24px rgba(123,111,224,0.25) !important; }
   @media (max-width: 700px) {
@@ -301,7 +289,6 @@
   <a href="#reflection">Reflection</a>
 </nav>
 
-<!-- PAGE 1: ABOUT ME -->
 <section class="page-section" id="about">
   <div class="container">
     <span class="page-label">About Me</span>
@@ -593,12 +580,9 @@
               <p>There were honest limitations. The simulation used an idealized open-boundary approximation rather than a full absorbing boundary condition, which introduces some numerical reflection at the edges of the simulation domain. The port excitation model also approximated a real feed line rather than simulating a coaxial or microstrip feed directly. These simplifications are standard in educational EM simulations but would need to be addressed before the design could transition to physical fabrication and measurement.</p>
             </div>
             <div class="tech-pills">
-              <span class="tech-pill">AWR Microwave Office EM Solver</span>
-              <span class="tech-pill">Slot Antenna Theory</span>
-              <span class="tech-pill">Babinet's Principle</span>
-              <span class="tech-pill">Radiation Pattern Analysis</span>
-              <span class="tech-pill">Parametric Ground Plane Study</span>
-              <span class="tech-pill">Input Impedance Analysis</span>
+              <span class="tech-pill">AWR Microwave Office EM Solver</span><span class="tech-pill">Slot Antenna Theory</span>
+              <span class="tech-pill">Babinet's Principle</span><span class="tech-pill">Radiation Pattern Analysis</span>
+              <span class="tech-pill">Parametric Ground Plane Study</span><span class="tech-pill">Input Impedance Analysis</span>
               <span class="tech-pill">2.4 GHz ISM Band</span>
             </div>
             <div class="result-callout">
@@ -778,7 +762,7 @@
           </div>
         </div>
       </div>
-    </div><!-- end course-projects-grid -->
+    </div>
     <div class="about-divider"></div>
     <div style="margin: 8px 0 32px;">
       <h3 style="font-family:'DM Serif Display',serif;font-size:26px;color:#e0d8ff;margin-bottom:10px;text-shadow:0 0 40px rgba(123,111,224,0.5);">Let's Connect</h3>
@@ -792,7 +776,6 @@
   </div>
 </section>
 
-<!-- PAGE 2: CAPSTONE PROJECT ENTRY -->
 <section class="page-section" id="project">
   <div class="container">
     <div class="project-hero">
@@ -902,54 +885,28 @@
       <p><strong>What I Contributed:</strong> My primary contributions included prototype testing, Wi-Fi HaLow and LoRa module testing and integration, final assembly, and contributions to the Final Design Report. I was also involved in the iterative evaluation of the HaLow and LTE subsystems, helping validate the end-to-end communication chain and analyze signal performance data.</p>
     </div>
 
-    <!-- RISK ASSESSMENT -->
     <div class="about-divider"></div>
     <span class="page-label">Risk Assessment</span>
     <h2 class="section-heading" style="margin-top:12px;margin-bottom:8px;">Project Risk Matrix</h2>
-    <p style="font-size:14px;color:var(--text-muted);margin-bottom:28px;">Click any risk to see the failure mode analysis and mitigation strategy.</p>
+    <p style="font-size:14px;color:var(--text-muted);margin-bottom:28px;">Click any risk to see the failure mode analysis and mitigation strategy. Click the same cell again to close it. RPN stands for Risk Priority Number, calculated as Severity × Occurrence × Detection. Any RPN above 100 was flagged as high priority and required active mitigation.</p>
 
     <div style="display:grid;grid-template-columns:auto 1fr 1fr 1fr;gap:3px;margin-bottom:32px;border:1px solid rgba(123,111,224,0.2);border-radius:8px;overflow:hidden;">
       <div style="background:rgba(13,13,43,0.9);padding:12px 10px;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);display:flex;align-items:flex-end;font-weight:600;">Sev / Prob</div>
       <div style="background:rgba(13,13,43,0.9);padding:12px;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-light);text-align:center;font-weight:600;">Low</div>
       <div style="background:rgba(13,13,43,0.9);padding:12px;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-light);text-align:center;font-weight:600;">Medium</div>
       <div style="background:rgba(13,13,43,0.9);padding:12px;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-light);text-align:center;font-weight:600;">High</div>
-
       <div style="background:rgba(13,13,43,0.7);padding:12px 10px;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);display:flex;align-items:center;font-weight:600;">High</div>
-      <div class="risk-cell" data-risk="safety" style="background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.35);padding:14px 10px;border-radius:6px;cursor:pointer;text-align:center;">
-        <div style="font-size:11px;font-weight:600;color:#f87171;line-height:1.3;">Safety Injury</div>
-      </div>
-      <div class="risk-cell" data-risk="range" style="background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.35);padding:14px 10px;border-radius:6px;cursor:pointer;text-align:center;">
-        <div style="font-size:11px;font-weight:600;color:#f87171;line-height:1.3;">Range &amp; Link Failure</div>
-      </div>
-      <div class="risk-cell" data-risk="weather" style="background:rgba(239,68,68,0.22);border:1px solid rgba(239,68,68,0.55);padding:14px 10px;border-radius:6px;cursor:pointer;text-align:center;">
-        <div style="font-size:11px;font-weight:600;color:#f87171;line-height:1.3;">Severe Weather</div>
-        <div style="font-size:9px;color:rgba(248,113,113,0.65);margin-top:3px;">8/10 prob</div>
-      </div>
-
+      <div class="risk-cell" data-risk="safety" style="background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.35);padding:14px 10px;border-radius:6px;cursor:pointer;text-align:center;"><div style="font-size:11px;font-weight:600;color:#f87171;line-height:1.3;">Safety Injury</div></div>
+      <div class="risk-cell" data-risk="range" style="background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.35);padding:14px 10px;border-radius:6px;cursor:pointer;text-align:center;"><div style="font-size:11px;font-weight:600;color:#f87171;line-height:1.3;">Range &amp; Link Failure</div></div>
+      <div class="risk-cell" data-risk="weather" style="background:rgba(239,68,68,0.22);border:1px solid rgba(239,68,68,0.55);padding:14px 10px;border-radius:6px;cursor:pointer;text-align:center;"><div style="font-size:11px;font-weight:600;color:#f87171;line-height:1.3;">Severe Weather</div><div style="font-size:9px;color:rgba(248,113,113,0.65);margin-top:3px;">8/10 prob</div></div>
       <div style="background:rgba(13,13,43,0.7);padding:12px 10px;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);display:flex;align-items:center;font-weight:600;">Medium</div>
-      <div class="risk-cell" data-risk="cost" style="background:rgba(234,179,8,0.08);border:1px solid rgba(234,179,8,0.28);padding:14px 10px;border-radius:6px;cursor:pointer;text-align:center;">
-        <div style="font-size:11px;font-weight:600;color:#fbbf24;line-height:1.3;">Cost Fluctuations</div>
-      </div>
-      <div class="risk-cell" data-risk="power" style="background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.35);padding:14px 10px;border-radius:6px;cursor:pointer;text-align:center;">
-        <div style="font-size:11px;font-weight:600;color:#fbbf24;line-height:1.3;">Power / Runtime</div>
-        <div style="font-size:9px;color:rgba(251,191,36,0.65);margin-top:3px;">RPN 144</div>
-      </div>
-      <div class="risk-cell" data-risk="gateway" style="background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.35);padding:14px 10px;border-radius:6px;cursor:pointer;text-align:center;">
-        <div style="font-size:11px;font-weight:600;color:#fbbf24;line-height:1.3;">Gateway Software Crash</div>
-        <div style="font-size:9px;color:rgba(251,191,36,0.65);margin-top:3px;">RPN 160</div>
-      </div>
-
+      <div class="risk-cell" data-risk="cost" style="background:rgba(234,179,8,0.08);border:1px solid rgba(234,179,8,0.28);padding:14px 10px;border-radius:6px;cursor:pointer;text-align:center;"><div style="font-size:11px;font-weight:600;color:#fbbf24;line-height:1.3;">Cost Fluctuations</div></div>
+      <div class="risk-cell" data-risk="power" style="background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.35);padding:14px 10px;border-radius:6px;cursor:pointer;text-align:center;"><div style="font-size:11px;font-weight:600;color:#fbbf24;line-height:1.3;">Power / Runtime</div><div style="font-size:9px;color:rgba(251,191,36,0.65);margin-top:3px;">RPN 144</div></div>
+      <div class="risk-cell" data-risk="gateway" style="background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.35);padding:14px 10px;border-radius:6px;cursor:pointer;text-align:center;"><div style="font-size:11px;font-weight:600;color:#fbbf24;line-height:1.3;">Gateway Software Crash</div><div style="font-size:9px;color:rgba(251,191,36,0.65);margin-top:3px;">RPN 160</div></div>
       <div style="background:rgba(13,13,43,0.7);padding:12px 10px;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);display:flex;align-items:center;font-weight:600;">Low</div>
-      <div class="risk-cell" data-risk="components" style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.25);padding:14px 10px;border-radius:6px;cursor:pointer;text-align:center;">
-        <div style="font-size:11px;font-weight:600;color:#4ade80;line-height:1.3;">Component Availability</div>
-      </div>
-      <div class="risk-cell" data-risk="schedule" style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.25);padding:14px 10px;border-radius:6px;cursor:pointer;text-align:center;">
-        <div style="font-size:11px;font-weight:600;color:#4ade80;line-height:1.3;">Schedule Delays</div>
-      </div>
-      <div class="risk-cell" data-risk="thermal" style="background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.35);padding:14px 10px;border-radius:6px;cursor:pointer;text-align:center;">
-        <div style="font-size:11px;font-weight:600;color:#fbbf24;line-height:1.3;">Thermal Buildup</div>
-        <div style="font-size:9px;color:rgba(251,191,36,0.65);margin-top:3px;">RPN 210 — Highest</div>
-      </div>
+      <div class="risk-cell" data-risk="components" style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.25);padding:14px 10px;border-radius:6px;cursor:pointer;text-align:center;"><div style="font-size:11px;font-weight:600;color:#4ade80;line-height:1.3;">Component Availability</div></div>
+      <div class="risk-cell" data-risk="schedule" style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.25);padding:14px 10px;border-radius:6px;cursor:pointer;text-align:center;"><div style="font-size:11px;font-weight:600;color:#4ade80;line-height:1.3;">Schedule Delays</div></div>
+      <div class="risk-cell" data-risk="thermal" style="background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.35);padding:14px 10px;border-radius:6px;cursor:pointer;text-align:center;"><div style="font-size:11px;font-weight:600;color:#fbbf24;line-height:1.3;">Thermal Buildup</div><div style="font-size:9px;color:rgba(251,191,36,0.65);margin-top:3px;">RPN 210 — Highest</div></div>
     </div>
 
     <div id="risk-detail" style="display:none;background:rgba(13,13,43,0.8);border:1px solid rgba(123,111,224,0.3);border-radius:8px;padding:28px;margin-bottom:32px;">
@@ -972,40 +929,9 @@
       </div>
     </div>
 
-    <script>
-    const riskData = {
-      thermal: { label: 'FMEA — Highest Priority · RPN 210', title: 'Thermal Buildup in Enclosure', rpn: 'RPN\n210', failure: 'Solar radiation combined with device self-heating from the SIM7670G 4G module (approximately 537 mW of heat) can push the Raspberry Pi Zero 2W toward its thermal throttling threshold, causing software lag and communication blackout.', mitigation: 'A 3-tiered enclosure physically isolates the heat-generating LTE radio from the Raspberry Pi and other modules. This layered isolation keeps the CPU below its 80°C thermal threshold, ensuring the bidirectional link remains usable throughout the mission.' },
-      gateway: { label: 'FMEA — High Priority · RPN 160', title: 'Gateway Software Crash from Multi-Protocol Overhead', rpn: 'RPN\n160', failure: 'Managing LoRa, Wi-Fi HaLow, and 4G LTE simultaneously creates a high complexity ceiling where drivers can conflict, causing the system to lag or stop transmission and reception entirely.', mitigation: 'Integration of the Reticulum network stack abstracts the hardware layer so the software communicates between modules without depending on which specific radio is active. If the LTE interface fails, the stack automatically reroutes over LoRa, preventing a total communication blackout.' },
-      power: { label: 'FMEA — High Priority · RPN 144', title: 'Power Instability from LTE Current Spikes', rpn: 'RPN\n144', failure: '4G/LTE modules require high transient current during transmission and reception, which can drop system voltage below the 4.7V threshold needed for stable Raspberry Pi operation, causing brownouts.', mitigation: 'High-discharge 18650 cells and decoupled power rails for radio modules and the Raspberry Pi isolate the host computer from transient surges generated by the radio hardware, preserving runtime and preventing unintentional blackouts.' },
-      weather: { label: 'Project Management Risk · Probability 8/10', title: 'Severe Weather Instability', rpn: '8/10\nProb', failure: 'Wind and rain can cause physical damage to the balloon platform or loss of line-of-sight between the HAP node and ground devices, breaking the communication link during deployment.', mitigation: 'Tethered flight protocols restrict deployment to calm-weather windows. All outdoor range testing was conducted under controlled conditions to minimize weather-related link disruption.' },
-      range: { label: 'Technical Risk · Severity High', title: 'Insufficient Communication Range', rpn: '5/10\nProb', failure: 'Range beyond 2 km may be limited by antenna alignment, terrain obstructions, or platform instability. The demonstrated LoRa-to-LoRa ceiling of 5.4 km dropped to zero link quality at 11.5 km in the HAP integration test.', mitigation: 'Link budget simulation and LoRa chirp spread spectrum modulation optimization. The modular architecture allows antenna upgrades and spreading factor tuning without redesigning the full system.' },
-      safety: { label: 'Safety Risk · EGBC Code of Ethics', title: 'Injury from Balloon Payload Failure', rpn: 'High\nSev', failure: 'Enclosure collapse or tether failure during balloon deployment could result in the payload falling and causing injury to personnel below or damage to property in the area.', mitigation: 'Strict PPE requirements, defined safety perimeters, and conservative low-altitude testing protocols. Current prototype testing was limited to rooftop elevation approximately 20 m, with full balloon deployment deferred to future work.' },
-      cost: { label: 'Project Management Risk', title: 'Budget Overrun Beyond $500 CAD', rpn: '5/10\nProb', failure: 'Procurement costs for specialized radio modules, PCB manufacturing, and 3D printing materials could exceed the $500 CAD project budget constraint, forcing scope reduction or component substitution.', mitigation: 'Real-time cost tracking against the BOM, component upcycling from previous prototypes, and prioritizing COTS off-the-shelf modules over custom hardware wherever possible.' },
-      schedule: { label: 'Project Management Risk', title: 'Schedule Delays from Integration Complexity', rpn: '5/10\nProb', failure: 'Software integration complexity across multiple radio protocols, custom Linux kernel patching for the HaLow driver, and hardware compatibility issues could delay testing milestones.', mitigation: 'Work breakdown structure tracking with weekly internal deliverables. The modular MVP-first design approach isolated each subsystem so failures in one layer did not block progress on others.' },
-      components: { label: 'Procurement Risk', title: 'Component Availability and Lead Times', rpn: 'Low\nSev', failure: 'Specialized components such as the Quectel FGH100M-H HaLow module and Seeed XIAO form-factor radios have limited availability and long international shipping lead times that could delay the build.', mitigation: 'Early procurement of long-lead-time components at the start of the project. Alternative COTS modules identified for each subsystem in case primary components were unavailable.' }
-    };
-    document.querySelectorAll('.risk-cell').forEach(cell => {
-      cell.addEventListener('click', () => {
-        const key = cell.getAttribute('data-risk');
-        const d = riskData[key];
-        document.getElementById('risk-detail-label').textContent = d.label;
-        document.getElementById('risk-detail-title').textContent = d.title;
-        document.getElementById('risk-detail-rpn').textContent = d.rpn;
-        document.getElementById('risk-detail-failure').textContent = d.failure;
-        document.getElementById('risk-detail-mitigation').textContent = d.mitigation;
-        const detail = document.getElementById('risk-detail');
-        detail.style.display = 'block';
-        detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        document.querySelectorAll('.risk-cell').forEach(c => c.style.opacity = '0.45');
-        cell.style.opacity = '1';
-      });
-    });
-    </script>
-
   </div>
 </section>
 
-<!-- PAGE 3: REFLECTION -->
 <section class="page-section" id="reflection">
   <div class="container">
     <span class="page-label">Reflection</span>
@@ -1036,6 +962,46 @@
 </section>
 
 <script>
+  const riskData = {
+    thermal: { label: 'FMEA — Highest Priority · RPN 210 (S:7 × O:6 × D:5)', title: 'Thermal Buildup in Enclosure', rpn: 'RPN\n210', failure: 'Solar radiation combined with device self-heating from the SIM7670G 4G module (approximately 537 mW of heat) can push the Raspberry Pi Zero 2W toward its thermal throttling threshold, causing software lag and communication blackout.', mitigation: 'A 3-tiered enclosure physically isolates the heat-generating LTE radio from the Raspberry Pi and other modules. This layered isolation keeps the CPU below its 80°C thermal threshold, ensuring the bidirectional link remains usable throughout the mission.' },
+    gateway: { label: 'FMEA — High Priority · RPN 160 (S:8 × O:5 × D:4)', title: 'Gateway Software Crash from Multi-Protocol Overhead', rpn: 'RPN\n160', failure: 'Managing LoRa, Wi-Fi HaLow, and 4G LTE simultaneously creates a high complexity ceiling where drivers can conflict, causing the system to lag or stop transmission and reception entirely.', mitigation: 'Integration of the Reticulum network stack abstracts the hardware layer so the software communicates between modules without depending on which specific radio is active. If the LTE interface fails, the stack automatically reroutes over LoRa, preventing a total communication blackout.' },
+    power: { label: 'FMEA — High Priority · RPN 144 (S:8 × O:6 × D:3)', title: 'Power Instability from LTE Current Spikes', rpn: 'RPN\n144', failure: '4G/LTE modules require high transient current during transmission and reception, which can drop system voltage below the 4.7V threshold needed for stable Raspberry Pi operation, causing brownouts.', mitigation: 'High-discharge 18650 cells and decoupled power rails for radio modules and the Raspberry Pi isolate the host computer from transient surges generated by the radio hardware, preserving runtime and preventing unintentional blackouts.' },
+    weather: { label: 'Project Management Risk · Probability 8/10 · RPN = Severity × Occurrence × Detection', title: 'Severe Weather Instability', rpn: '8/10\nProb', failure: 'Wind and rain can cause physical damage to the balloon platform or loss of line-of-sight between the HAP node and ground devices, breaking the communication link during deployment.', mitigation: 'Tethered flight protocols restrict deployment to calm-weather windows. All outdoor range testing was conducted under controlled conditions to minimize weather-related link disruption.' },
+    range: { label: 'Technical Risk · Severity High · RPN = Severity × Occurrence × Detection', title: 'Insufficient Communication Range', rpn: '5/10\nProb', failure: 'Range beyond 2 km may be limited by antenna alignment, terrain obstructions, or platform instability. The demonstrated LoRa-to-LoRa ceiling of 5.4 km dropped to zero link quality at 11.5 km in the HAP integration test.', mitigation: 'Link budget simulation and LoRa chirp spread spectrum modulation optimization. The modular architecture allows antenna upgrades and spreading factor tuning without redesigning the full system.' },
+    safety: { label: 'Safety Risk · EGBC Code of Ethics · RPN = Severity × Occurrence × Detection', title: 'Injury from Balloon Payload Failure', rpn: 'High\nSev', failure: 'Enclosure collapse or tether failure during balloon deployment could result in the payload falling and causing injury to personnel below or damage to property in the area.', mitigation: 'Strict PPE requirements, defined safety perimeters, and conservative low-altitude testing protocols. Current prototype testing was limited to rooftop elevation approximately 20 m, with full balloon deployment deferred to future work.' },
+    cost: { label: 'Project Management Risk · RPN = Severity × Occurrence × Detection', title: 'Budget Overrun Beyond $500 CAD', rpn: '5/10\nProb', failure: 'Procurement costs for specialized radio modules, PCB manufacturing, and 3D printing materials could exceed the $500 CAD project budget constraint, forcing scope reduction or component substitution.', mitigation: 'Real-time cost tracking against the BOM, component upcycling from previous prototypes, and prioritizing COTS off-the-shelf modules over custom hardware wherever possible.' },
+    schedule: { label: 'Project Management Risk · RPN = Severity × Occurrence × Detection', title: 'Schedule Delays from Integration Complexity', rpn: '5/10\nProb', failure: 'Software integration complexity across multiple radio protocols, custom Linux kernel patching for the HaLow driver, and hardware compatibility issues could delay testing milestones.', mitigation: 'Work breakdown structure tracking with weekly internal deliverables. The modular MVP-first design approach isolated each subsystem so failures in one layer did not block progress on others.' },
+    components: { label: 'Procurement Risk · RPN = Severity × Occurrence × Detection', title: 'Component Availability and Lead Times', rpn: 'Low\nSev', failure: 'Specialized components such as the Quectel FGH100M-H HaLow module and Seeed XIAO form-factor radios have limited availability and long international shipping lead times that could delay the build.', mitigation: 'Early procurement of long-lead-time components at the start of the project. Alternative COTS modules identified for each subsystem in case primary components were unavailable.' }
+  };
+
+  let activeRisk = null;
+
+  document.querySelectorAll('.risk-cell').forEach(cell => {
+    cell.addEventListener('click', () => {
+      const key = cell.getAttribute('data-risk');
+      const detail = document.getElementById('risk-detail');
+
+      if (activeRisk === key) {
+        activeRisk = null;
+        detail.style.display = 'none';
+        document.querySelectorAll('.risk-cell').forEach(c => c.style.opacity = '1');
+        return;
+      }
+
+      activeRisk = key;
+      const d = riskData[key];
+      document.getElementById('risk-detail-label').textContent = d.label;
+      document.getElementById('risk-detail-title').textContent = d.title;
+      document.getElementById('risk-detail-rpn').textContent = d.rpn;
+      document.getElementById('risk-detail-failure').textContent = d.failure;
+      document.getElementById('risk-detail-mitigation').textContent = d.mitigation;
+      detail.style.display = 'block';
+      detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      document.querySelectorAll('.risk-cell').forEach(c => c.style.opacity = '0.45');
+      cell.style.opacity = '1';
+    });
+  });
+
   const cosmicCursor = document.getElementById('cosmic-cursor');
   const cursorGlow = document.getElementById('cursor-glow');
   const cursorRing = document.getElementById('cursor-ring');
@@ -1069,10 +1035,12 @@
     cursorRing.style.borderColor = 'rgba(140,80,255,0.75)';
     cursorRing.style.boxShadow = '0 0 12px rgba(120,40,255,0.5), inset 0 0 12px rgba(120,40,255,0.15)';
   });
+
   function toggleCard(id) {
     const card = document.getElementById(id);
     card.classList.toggle('open');
   }
+
   const sections = document.querySelectorAll('.page-section');
   const navLinks = document.querySelectorAll('.page-nav a');
   window.addEventListener('scroll', () => {
