@@ -5,30 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ahmed Shehata — About Me</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 <style>
-  :root {
-    --navy: #0a0a1a; --navy-mid: #0d0d2b; --accent: #7b6fe0;
-    --accent-light: #1a1a3e; --off-white: #0d0d1f; --warm-gray: #1a1a3a;
-    --text: #e8e8ff; --text-muted: #b0b0d8; --text-light: #6060aa;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; cursor: none !important; }
-  body { font-family: 'DM Sans', sans-serif; background: #05050f; color: var(--text); line-height: 1.85; overflow-x: hidden; font-size: 16px; }
-  #cosmic-cursor { position: fixed; pointer-events: none; z-index: 99999; width: 40px; height: 40px; transform: translate(-50%, -50%); animation: cursor-spin 3s linear infinite; }
-  #cosmic-cursor svg { width: 100%; height: 100%; filter: drop-shadow(0 0 8px rgba(120,40,255,1)) drop-shadow(0 0 20px rgba(100,20,220,0.9)) drop-shadow(0 0 40px rgba(80,0,180,0.7)) drop-shadow(0 0 60px rgba(60,0,140,0.4)); }
-  #cursor-glow { position: fixed; pointer-events: none; z-index: 99997; width: 90px; height: 90px; border-radius: 50%; background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(30,0,60,0.35) 40%, transparent 70%); transform: translate(-50%, -50%); transition: left 0.1s ease, top 0.1s ease; }
-  #cursor-ring { position: fixed; pointer-events: none; z-index: 99998; width: 70px; height: 70px; border-radius: 50%; border: 2px solid rgba(140,80,255,0.75); box-shadow: 0 0 12px rgba(120,40,255,0.5), inset 0 0 12px rgba(120,40,255,0.15); transform: translate(-50%, -50%); transition: left 0.18s ease, top 0.18s ease; animation: ring-pulse 2s ease-in-out infinite; }
-  .cursor-trail { position: fixed; pointer-events: none; z-index: 99996; border-radius: 50%; transform: translate(-50%, -50%); background: rgba(120,40,255,0.7); box-shadow: 0 0 6px rgba(120,40,255,0.5); animation: trail-fade 0.6s ease-out forwards; }
-  @keyframes cursor-spin { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
-  @keyframes ring-pulse { 0%, 100% { width: 70px; height: 70px; opacity: 0.75; } 50% { width: 84px; height: 84px; opacity: 0.3; } }
-  @keyframes trail-fade { 0% { opacity: 0.8; width: 10px; height: 10px; } 100% { opacity: 0; width: 3px; height: 3px; } }
-  .page-nav { position: sticky; top: 0; background: rgba(5,5,15,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); z-index: 100; display: flex; gap: 0; border-bottom: 1px solid rgba(123,111,224,0.3); }
-  .page-nav a { color: rgba(200,200,255,0.6); text-decoration: none; padding: 14px 28px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; transition: all 0.2s; border-right: 1px solid rgba(123,111,224,0.1); }
-  .page-nav a:hover, .page-nav a.active { color: #c0b8ff; background: rgba(123,111,224,0.1); text-shadow: 0 0 20px rgba(123,111,224,0.8); }
-  .page-section { padding: 80px 0; position: relative; z-index: 1; }
-  .container { max-width: 900px; margin: 0 auto; padding: 0 40px; }
-  .page-label { display: inline-block; background: rgba(123,111,224,0.15); color: #c0b8ff; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 14px; border-radius: 12px; margin-bottom: 2rem; border: 1px solid rgba(123,111,224,0.4); }
-  .about-divider { width: 48px; height: 1px; background: linear-gradient(90deg, #7b6fe0, transparent); margin: 32px 0; }
-  .section-heading { font-family: 'DM Serif Display', serif; font-size: 28px; color: #e0d8ff; margin-bottom: 8px; text-shadow: 0 0 40px rgba(123,111,224,0.5); }
+  /* === index.html — page-specific styles === */
   .section-subheading { font-size: 14px; color: var(--text-light); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 24px; }
   .about-hero { display: grid; grid-template-columns: 200px 1fr; gap: 48px; align-items: start; margin-bottom: 56px; }
   .about-name { font-family: 'DM Serif Display', serif; font-size: 48px; color: #e0d8ff; line-height: 1.1; margin-bottom: 6px; text-shadow: 0 0 60px rgba(123,111,224,0.4); }
@@ -59,7 +38,6 @@
   .course-card.open .course-card-body { max-height: 9999px; border-top-width: 1px; }
   .course-card-inner { padding: 32px 24px 32px 80px; }
   .star-block { margin-bottom: 32px; }
-  .star-label { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #c0b8ff; background: rgba(123,111,224,0.1); border: 1px solid rgba(123,111,224,0.4); padding: 3px 10px; border-radius: 12px; margin-bottom: 10px; }
   .star-block h4 { font-family: 'DM Serif Display', serif; font-size: 20px; color: #e0d8ff; margin-bottom: 10px; }
   .star-block p { font-size: 15px; color: var(--text-muted); line-height: 1.85; margin-bottom: 12px; }
   .stage-timeline { position: relative; margin: 24px 0; padding-left: 28px; border-left: 1px solid rgba(123,111,224,0.3); }
@@ -68,17 +46,11 @@
   .stage-step .stage-num { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #9d94f0; margin-bottom: 3px; }
   .stage-step h5 { font-weight: 600; font-size: 15px; color: #e0d8ff; margin-bottom: 6px; }
   .stage-step p { font-size: 15px; color: var(--text-muted); line-height: 1.85; margin-bottom: 8px; }
-
-  /* Figure image sizing — 85% width, centered */
-  .fig-wrap img { display: block; margin: 0 auto; width: 50%; max-width: 520px; border-radius: 8px; border: 1px solid rgba(123,111,224,0.2); box-shadow: 0 4px 20px rgba(0,0,0,0.3); cursor: zoom-in; transition: border-color 0.3s, box-shadow 0.3s; }
+  .fig-wrap img { display: block; margin: 0 auto; width: 85%; max-width: 700px; border-radius: 8px; border: 1px solid rgba(123,111,224,0.2); box-shadow: 0 4px 20px rgba(0,0,0,0.3); cursor: zoom-in; transition: border-color 0.3s, box-shadow 0.3s; }
   .fig-wrap img:hover { border-color: rgba(123,111,224,0.5); box-shadow: 0 0 24px rgba(123,111,224,0.15); }
-  .fig-wrap img { display: block; margin: 0 auto; width: 85%; max-width: 700px; border-radius: 8px; border: 1px solid rgba(123,111,224,0.2); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
   .fig-wrap img.half { width: 30%; max-width: 280px; }
-  
-  /* Styled caption */
   .fig-cap { display: block; margin: 8px auto 0; width: 50%; max-width: 520px; padding: 8px 14px; background: rgba(123,111,224,0.07); border-left: 3px solid rgba(123,111,224,0.55); border-radius: 0 6px 6px 0; font-size: 12px; color: #a090e0; font-style: italic; line-height: 1.6; text-align: left; }
   .fig-cap.half-cap { width: 30%; max-width: 280px; }
-
   .tech-pills { display: flex; flex-wrap: wrap; gap: 7px; margin: 16px 0; }
   .tech-pill { background: rgba(123,111,224,0.12); color: #c0b8ff; font-size: 12px; padding: 4px 12px; border-radius: 12px; font-weight: 500; letter-spacing: 0.04em; border: 1px solid rgba(123,111,224,0.25); }
   .result-callout { background: rgba(123,111,224,0.08); padding: 20px 24px; border-radius: 8px; margin: 20px 0; border: 1px solid rgba(123,111,224,0.2); border-left: 2px solid rgba(123,111,224,0.6); font-size: 15px; line-height: 1.85; color: var(--text-muted); }
@@ -157,7 +129,7 @@
   <div class="container">
     <span class="page-label">About Me</span>
     <div class="about-hero">
-      <img src="headshot.jpg" alt="Ahmed Shehata" style="width:200px;height:200px;border-radius:50%;object-fit:cover;object-position:center top;border:1px solid rgba(123,111,224,0.5);box-shadow:0 0 40px rgba(123,111,224,0.2);">
+      <img src="images/headshot.jpg" alt="Ahmed Shehata" style="width:200px;height:200px;border-radius:50%;object-fit:cover;object-position:center top;border:1px solid rgba(123,111,224,0.5);box-shadow:0 0 40px rgba(123,111,224,0.2);">
       <div>
         <div class="about-title">B.A.Sc. Electrical Engineering · UBC Okanagan</div>
         <h1 class="about-name">Ahmed<br>Shehata</h1>
@@ -293,11 +265,11 @@
               </div>
             </div>
             <div class="fig-wrap">
-              <img src="ppg-breadboard.jpg" alt="Assembled PPG breadboard">
+              <img src="images/ppg-breadboard.jpg" alt="Assembled PPG breadboard">
               <span class="fig-cap">Fully assembled PPG heart rate sensor. All four stages are visible across the breadboard, from the transimpedance amplifier on the left through to the monostable multivibrator and green LED driver on the right.</span>
             </div>
             <div class="fig-wrap">
-              <img src="ppg-oscilloscope.jpg" alt="Oscilloscope output showing LED flash synchronized to PPG signal">
+              <img src="images/ppg-oscilloscope.jpg" alt="Oscilloscope output showing LED flash synchronized to PPG signal">
               <span class="fig-cap">Final system output. CH1 (orange) shows the LED anode signal flashing at Ton = 170 ms per heartbeat. CH2 (blue) shows the raw PPG signal from the finger sensor, confirming each LED flash is correctly synchronized to the cardiac cycle.</span>
             </div>
             <div class="star-block">
@@ -376,15 +348,15 @@
               </div>
             </div>
             <div class="fig-wrap">
-              <img src="lna-noisefigure.jpg" alt="Noise Figure vs frequency for CE LNA configurations">
+              <img src="images/lna-noisefigure.jpg" alt="Noise Figure vs frequency for CE LNA configurations">
               <span class="fig-cap">Noise figure versus frequency for three CE LNA configurations at 5 GHz. Pink: no inductors (NF around 1.68 dB). Blue: emitter degeneration only. Red: emitter degeneration plus series base inductor (NF around 1.39 dB). Device scaling to 24 fingers is the single most impactful step before any matching network is added.</span>
             </div>
             <div class="fig-wrap">
-              <img src="lna-gain.jpg" alt="S21 gain comparison between CE and cascode LNA">
+              <img src="images/lna-gain.jpg" alt="S21 gain comparison between CE and cascode LNA">
               <span class="fig-cap">Gain |S21| versus frequency. The CE LNA achieves 8.67 dB at 5 GHz. The cascode LNA peaks at 21.07 dB, a 12.4 dB improvement from adding the cascode stage and emitter follower.</span>
             </div>
             <div class="fig-wrap">
-              <img src="lna-schematic.jpg" alt="Final cascode LNA schematic in AWR">
+              <img src="images/lna-schematic.jpg" alt="Final cascode LNA schematic in AWR">
               <span class="fig-cap">Final cascode LNA schematic in AWR Microwave Office. The differential cascode pair (Q1/Q2 and Q3/Q4, each N=12 fingers) is preceded by base inductor LB and emitter inductor LE for input matching, and followed by a resonant tank load and emitter follower output buffer driving the 50 Ω port.</span>
             </div>
             <div class="star-block">
@@ -466,16 +438,16 @@
               </div>
             </div>
             <div class="fig-wrap">
-              <img src="antenna-layout.jpg" alt="Slot antenna layout in AWR EM">
+              <img src="images/antenna-layout.jpg" alt="Slot antenna layout in AWR EM" class="half">
               <span class="fig-cap">Final slot antenna layout in AWR EM. The conducting ground plane measures 0.48λ × 0.6λ with a centred rectangular aperture of 0.447λ × 0.1λ. Patch-style excitation ports drive the voltage across the slot to produce the radiating aperture currents.</span>
             </div>
             <div class="fig-wrap">
-              <img src="antenna-impedance.jpg" alt="Input impedance plot showing self-resonance at 2.397 GHz">
+              <img src="images/antenna-impedance.jpg" alt="Input impedance plot showing self-resonance at 2.397 GHz">
               <span class="fig-cap">Input impedance versus frequency. Im(Z(1,1)) crosses zero at 2.397 GHz confirming self-resonance. Re(Z(1,1)) peaks at 417.8 Ω at 2.4 GHz, consistent with the theoretical slot impedance from Babinet's complement principle.</span>
             </div>
             <div class="fig-wrap">
-              <img src="antenna-pattern.jpg" alt="3D directivity pattern of final slot antenna design" class="half">
-              <span class="fig-cap half-cap">3D directivity pattern of the final 0.48λ × 0.6λ slot antenna at 2.4 GHz. The smooth toroidal envelope with peak directivity of 4.21 dBi confirms the ground plane geometry produces the closest approximation to the theoretical omnidirectional donut pattern.</span>
+              <img src="images/antenna-pattern.jpg" alt="3D directivity pattern of final slot antenna design">
+              <span class="fig-cap">3D directivity pattern of the final 0.48λ × 0.6λ slot antenna at 2.4 GHz. The smooth toroidal envelope with peak directivity of 4.21 dBi confirms the ground plane geometry produces the closest approximation to the theoretical omnidirectional donut pattern.</span>
             </div>
             <div class="star-block">
               <span class="star-label">R — Result</span>
@@ -536,15 +508,15 @@
               </div>
             </div>
             <div class="fig-wrap">
-              <img src="ml-flowchart.jpg" alt="Feature extraction flowchart">
+              <img src="images/ml-flowchart.jpg" alt="Feature extraction flowchart">
               <span class="fig-cap">Flowchart of the 17-feature extraction pipeline. The preprocessing stages feed into geometric feature extraction covering bounding box dimensions, contour metrics, circularity, and seven Hu invariant moments.</span>
             </div>
             <div class="fig-wrap">
-              <img src="ml-pipeline-white.jpg" alt="Preprocessing pipeline applied to a white 2x1 brick">
+              <img src="images/ml-pipeline-white.jpg" alt="Preprocessing pipeline applied to a white 2x1 brick">
               <span class="fig-cap">Pipeline failure mode: a white 2x1 brick on a white background. The Otsu threshold fragments the mask because the piece and background have similar intensities, producing an unreliable contour and degraded features. This is the primary source of remaining classification error.</span>
             </div>
             <div class="fig-wrap">
-              <img src="ml-pipeline-dark.jpg" alt="Preprocessing pipeline applied to a dark 2x2 brick">
+              <img src="images/ml-pipeline-dark.jpg" alt="Preprocessing pipeline applied to a dark 2x2 brick">
               <span class="fig-cap">Pipeline success case: a dark 2x2 brick with sufficient contrast. Contrast enhancement produces a clean bimodal histogram, Otsu thresholding yields a solid binary mask, and the contour wraps tightly around the piece, giving the classifier reliable geometric features to work with.</span>
             </div>
             <div class="star-block">
@@ -626,20 +598,20 @@
               </div>
             </div>
             <div class="fig-wrap">
-              <img src="motor-rotor.jpg" alt="3D printed rotor shell with mild steel core segments" class="half">
-              <span class="fig-cap half-cap">3D-printed PLA rotor shell with mild steel rod segments ready for press-fitting. The 12 slots accept alternating-polarity neodymium magnets to produce the 24-pole rotor configuration chosen to minimize cogging torque.</span>
+              <img src="images/motor-rotor.jpg" alt="3D printed rotor shell with mild steel core segments" class="half">
+              <span class="fig-cap">3D-printed PLA rotor shell with mild steel rod segments ready for press-fitting. The 12 slots accept alternating-polarity neodymium magnets to produce the 24-pole rotor configuration chosen to minimize cogging torque.</span>
             </div>
             <div class="fig-wrap">
-              <img src="motor-stator.jpg" alt="Top view of assembled motor showing stator and propeller">
+              <img src="images/motor-stator.jpg" alt="Top view of assembled motor showing stator and propeller">
               <span class="fig-cap">Top view of the assembled outrunner motor with propeller attached. The 9 hand-wound stator coils in 3-phase wye configuration are visible through the rotor opening. The three phase wires exit the base for connection to the motor controller.</span>
             </div>
             <div class="fig-wrap">
-              <img src="motor-assembly.jpg" alt="Full motor assembly with propeller and commercial ESC">
+              <img src="images/motor-assembly.jpg" alt="Full motor assembly with propeller and commercial ESC" class="half">
               <span class="fig-cap">Full motor assembly during initial phase validation testing, connected to a commercial ESC to confirm balanced back-EMF waveforms before integrating the custom PCB controller.</span>
             </div>
             <div class="fig-wrap">
-              <img src="motor-pcb.jpg" alt="Custom motor controller PCB" class="half">
-              <span class="fig-cap half-cap">Top: KiCad schematic. Middle: PCB layout render. Bottom: fabricated double-sided board integrating an STM32 microcontroller and motor driver IC, rated 25VDC / 4A, running sensorless FOC firmware via the STM32 Motor Control SDK.</span>
+              <img src="images/motor-pcb.jpg" alt="Custom motor controller PCB" class="half">
+              <span class="fig-cap">Top: KiCad schematic. Middle: PCB layout render. Bottom: fabricated double-sided board integrating an STM32 microcontroller and motor driver IC, rated 25VDC / 4A, running sensorless FOC firmware via the STM32 Motor Control SDK.</span>
             </div>
             <div class="star-block">
               <span class="star-label">R — Result</span>
