@@ -157,7 +157,7 @@
   <div class="container">
     <span class="page-label">About Me</span>
     <div class="about-hero">
-      <img src="headshot.jpg" alt="Ahmed Shehata" style="width:200px;height:200px;border-radius:50%;object-fit:cover;object-position:center top;border:1px solid rgba(123,111,224,0.5);box-shadow:0 0 40px rgba(123,111,224,0.2);">
+      <img src="images/headshot.jpg" alt="Ahmed Shehata" style="width:200px;height:200px;border-radius:50%;object-fit:cover;object-position:center top;border:1px solid rgba(123,111,224,0.5);box-shadow:0 0 40px rgba(123,111,224,0.2);">
       <div>
         <div class="about-title">B.A.Sc. Electrical Engineering · UBC Okanagan</div>
         <h1 class="about-name">Ahmed<br>Shehata</h1>
@@ -293,11 +293,11 @@
               </div>
             </div>
             <div class="fig-wrap">
-              <img src="ppg-breadboard.jpg" alt="Assembled PPG breadboard">
+              <img src="images/ppg-breadboard.jpg" alt="Assembled PPG breadboard">
               <span class="fig-cap">Fully assembled PPG heart rate sensor. All four stages are visible across the breadboard, from the transimpedance amplifier on the left through to the monostable multivibrator and green LED driver on the right.</span>
             </div>
             <div class="fig-wrap">
-              <img src="ppg-oscilloscope.jpg" alt="Oscilloscope output showing LED flash synchronized to PPG signal">
+              <img src="images/ppg-oscilloscope.jpg" alt="Oscilloscope output showing LED flash synchronized to PPG signal">
               <span class="fig-cap">Final system output. CH1 (orange) shows the LED anode signal flashing at Ton = 170 ms per heartbeat. CH2 (blue) shows the raw PPG signal from the finger sensor, confirming each LED flash is correctly synchronized to the cardiac cycle.</span>
             </div>
             <div class="star-block">
@@ -376,15 +376,15 @@
               </div>
             </div>
             <div class="fig-wrap">
-              <img src="lna-noisefigure.jpg" alt="Noise Figure vs frequency for CE LNA configurations">
+              <img src="images/lna-noisefigure.jpg" alt="Noise Figure vs frequency for CE LNA configurations">
               <span class="fig-cap">Noise figure versus frequency for three CE LNA configurations at 5 GHz. Pink: no inductors (NF around 1.68 dB). Blue: emitter degeneration only. Red: emitter degeneration plus series base inductor (NF around 1.39 dB). Device scaling to 24 fingers is the single most impactful step before any matching network is added.</span>
             </div>
             <div class="fig-wrap">
-              <img src="lna-gain.jpg" alt="S21 gain comparison between CE and cascode LNA">
+              <img src="images/lna-gain.jpg" alt="S21 gain comparison between CE and cascode LNA">
               <span class="fig-cap">Gain |S21| versus frequency. The CE LNA achieves 8.67 dB at 5 GHz. The cascode LNA peaks at 21.07 dB, a 12.4 dB improvement from adding the cascode stage and emitter follower.</span>
             </div>
             <div class="fig-wrap">
-              <img src="lna-schematic.jpg" alt="Final cascode LNA schematic in AWR">
+              <img src="images/lna-schematic.jpg" alt="Final cascode LNA schematic in AWR">
               <span class="fig-cap">Final cascode LNA schematic in AWR Microwave Office. The differential cascode pair (Q1/Q2 and Q3/Q4, each N=12 fingers) is preceded by base inductor LB and emitter inductor LE for input matching, and followed by a resonant tank load and emitter follower output buffer driving the 50 Ω port.</span>
             </div>
             <div class="star-block">
@@ -466,15 +466,15 @@
               </div>
             </div>
             <div class="fig-wrap">
-              <img src="antenna-layout.jpg" alt="Slot antenna layout in AWR EM">
+              <img src="images/antenna-layout.jpg" alt="Slot antenna layout in AWR EM">
               <span class="fig-cap">Final slot antenna layout in AWR EM. The conducting ground plane measures 0.48λ × 0.6λ with a centred rectangular aperture of 0.447λ × 0.1λ. Patch-style excitation ports drive the voltage across the slot to produce the radiating aperture currents.</span>
             </div>
             <div class="fig-wrap">
-              <img src="antenna-impedance.jpg" alt="Input impedance plot showing self-resonance at 2.397 GHz">
+              <img src="images/antenna-impedance.jpg" alt="Input impedance plot showing self-resonance at 2.397 GHz">
               <span class="fig-cap">Input impedance versus frequency. Im(Z(1,1)) crosses zero at 2.397 GHz confirming self-resonance. Re(Z(1,1)) peaks at 417.8 Ω at 2.4 GHz, consistent with the theoretical slot impedance from Babinet's complement principle.</span>
             </div>
             <div class="fig-wrap">
-              <img src="antenna-pattern.jpg" alt="3D directivity pattern of final slot antenna design" class="half">
+              <img src="images/antenna-pattern.jpg" alt="3D directivity pattern of final slot antenna design" class="half">
               <span class="fig-cap half-cap">3D directivity pattern of the final 0.48λ × 0.6λ slot antenna at 2.4 GHz. The smooth toroidal envelope with peak directivity of 4.21 dBi confirms the ground plane geometry produces the closest approximation to the theoretical omnidirectional donut pattern.</span>
             </div>
             <div class="star-block">
@@ -536,15 +536,15 @@
               </div>
             </div>
             <div class="fig-wrap">
-              <img src="ml-flowchart.jpg" alt="Feature extraction flowchart">
+              <img src="images/ml-flowchart.jpg" alt="Feature extraction flowchart">
               <span class="fig-cap">Flowchart of the 17-feature extraction pipeline. The preprocessing stages feed into geometric feature extraction covering bounding box dimensions, contour metrics, circularity, and seven Hu invariant moments.</span>
             </div>
             <div class="fig-wrap">
-              <img src="ml-pipeline-white.jpg" alt="Preprocessing pipeline applied to a white 2x1 brick">
+              <img src="images/ml-pipeline-white.jpg" alt="Preprocessing pipeline applied to a white 2x1 brick">
               <span class="fig-cap">Pipeline failure mode: a white 2x1 brick on a white background. The Otsu threshold fragments the mask because the piece and background have similar intensities, producing an unreliable contour and degraded features. This is the primary source of remaining classification error.</span>
             </div>
             <div class="fig-wrap">
-              <img src="ml-pipeline-dark.jpg" alt="Preprocessing pipeline applied to a dark 2x2 brick">
+              <img src="images/ml-pipeline-dark.jpg" alt="Preprocessing pipeline applied to a dark 2x2 brick">
               <span class="fig-cap">Pipeline success case: a dark 2x2 brick with sufficient contrast. Contrast enhancement produces a clean bimodal histogram, Otsu thresholding yields a solid binary mask, and the contour wraps tightly around the piece, giving the classifier reliable geometric features to work with.</span>
             </div>
             <div class="star-block">
@@ -626,19 +626,19 @@
               </div>
             </div>
             <div class="fig-wrap">
-              <img src="motor-rotor.jpg" alt="3D printed rotor shell with mild steel core segments" class="half">
+              <img src="images/motor-rotor.jpg" alt="3D printed rotor shell with mild steel core segments" class="half">
               <span class="fig-cap half-cap">3D-printed PLA rotor shell with mild steel rod segments ready for press-fitting. The 12 slots accept alternating-polarity neodymium magnets to produce the 24-pole rotor configuration chosen to minimize cogging torque.</span>
             </div>
             <div class="fig-wrap">
-              <img src="motor-stator.jpg" alt="Top view of assembled motor showing stator and propeller">
+              <img src="images/motor-stator.jpg" alt="Top view of assembled motor showing stator and propeller">
               <span class="fig-cap">Top view of the assembled outrunner motor with propeller attached. The 9 hand-wound stator coils in 3-phase wye configuration are visible through the rotor opening. The three phase wires exit the base for connection to the motor controller.</span>
             </div>
             <div class="fig-wrap">
-              <img src="motor-assembly.jpg" alt="Full motor assembly with propeller and commercial ESC">
+              <img src="images/motor-assembly.jpg" alt="Full motor assembly with propeller and commercial ESC">
               <span class="fig-cap">Full motor assembly during initial phase validation testing, connected to a commercial ESC to confirm balanced back-EMF waveforms before integrating the custom PCB controller.</span>
             </div>
             <div class="fig-wrap">
-              <img src="motor-pcb.jpg" alt="Custom motor controller PCB" class="half">
+              <img src="images/motor-pcb.jpg" alt="Custom motor controller PCB" class="half">
               <span class="fig-cap half-cap">Top: KiCad schematic. Middle: PCB layout render. Bottom: fabricated double-sided board integrating an STM32 microcontroller and motor driver IC, rated 25VDC / 4A, running sensorless FOC firmware via the STM32 Motor Control SDK.</span>
             </div>
             <div class="star-block">
