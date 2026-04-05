@@ -34,11 +34,16 @@
   .about-name { font-family: 'DM Serif Display', serif; font-size: 48px; color: #e0d8ff; line-height: 1.1; margin-bottom: 6px; text-shadow: 0 0 60px rgba(123,111,224,0.4); }
   .about-title { font-size: 15px; color: #9d94f0; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 20px; }
   .about-bio { font-size: 16px; color: var(--text-muted); line-height: 1.85; max-width: 600px; }
-  .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 32px 0; }
-  .skill-card { background: rgba(13,13,43,0.6); border: 1px solid rgba(123,111,224,0.2); border-top: 1px solid rgba(123,111,224,0.6); padding: 20px; border-radius: 8px; backdrop-filter: blur(10px); }
-  .skill-card h4 { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #9d94f0; margin-bottom: 10px; }
-  .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-  .skill-tag { background: rgba(123,111,224,0.12); color: #c0b8ff; font-size: 12px; padding: 3px 10px; border-radius: 12px; font-weight: 500; border: 1px solid rgba(123,111,224,0.25); }
+  .skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 32px 0; border: 1px solid rgba(123,111,224,0.18); border-radius: 10px; overflow: hidden; }
+  .skill-card { padding: 28px 24px; border-right: 1px solid rgba(123,111,224,0.18); background: rgba(8,8,24,0.55); transition: background 0.2s; }
+  .skill-card:last-child { border-right: none; }
+  .skill-card:hover { background: rgba(123,111,224,0.06); }
+  .skill-card h4 { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #7b6fe0; margin-bottom: 20px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+  .skill-card h4::before { content: ''; display: inline-block; width: 3px; height: 14px; background: #7b6fe0; border-radius: 2px; flex-shrink: 0; }
+  .skill-list { list-style: none; padding: 0; }
+  .skill-list li { font-size: 14px; color: #b0b0d8; line-height: 1; padding: 7px 0; border-bottom: 1px solid rgba(123,111,224,0.08); display: flex; align-items: center; gap: 8px; }
+  .skill-list li:last-child { border-bottom: none; }
+  .skill-list li::before { content: '○'; font-size: 8px; color: #7b6fe0; flex-shrink: 0; }
   .course-projects-grid { display: grid; gap: 12px; margin: 24px 0; }
   .course-card { background: rgba(10,10,30,0.7); border: 1px solid rgba(123,111,224,0.2); border-left: 2px solid rgba(123,111,224,0.6); border-radius: 8px; overflow: hidden; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transition: border-color 0.3s, box-shadow 0.3s; }
   .course-card:hover { border-color: rgba(123,111,224,0.5); box-shadow: 0 0 30px rgba(123,111,224,0.08); }
@@ -173,28 +178,55 @@
     <h2 class="section-heading">Skills and Areas of Focus</h2>
     <div class="skills-grid">
       <div class="skill-card">
-        <h4>RF and Communications</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">LoRa</span><span class="skill-tag">Wi-Fi HaLow</span>
-          <span class="skill-tag">LTE</span><span class="skill-tag">GNU Radio</span>
-          <span class="skill-tag">Antenna Design</span><span class="skill-tag">RFIC</span>
-        </div>
+        <h4>RF &amp; Wireless</h4>
+        <ul class="skill-list">
+          <li>LoRa / Chirp Spread Spectrum</li>
+          <li>Wi-Fi HaLow 802.11ah</li>
+          <li>LTE / 4G Backhaul</li>
+          <li>SDR / USRP</li>
+          <li>Antenna Design</li>
+          <li>RF IC Design</li>
+          <li>GNU Radio</li>
+          <li>AWR Microwave Office</li>
+        </ul>
       </div>
       <div class="skill-card">
-        <h4>Software and Tools</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">Python</span><span class="skill-tag">AWR</span>
-          <span class="skill-tag">OpenCV</span><span class="skill-tag">MATLAB</span>
-          <span class="skill-tag">Linux</span><span class="skill-tag">Raspberry Pi</span>
-        </div>
+        <h4>Software</h4>
+        <ul class="skill-list">
+          <li>Python</li>
+          <li>C++</li>
+          <li>MATLAB</li>
+          <li>Java</li>
+          <li>Flutter</li>
+          <li>MySQL / Docker</li>
+          <li>OpenCV</li>
+          <li>Linux</li>
+        </ul>
       </div>
       <div class="skill-card">
-        <h4>Engineering</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">Machine Learning</span><span class="skill-tag">Mechatronics</span>
-          <span class="skill-tag">Circuit Design</span><span class="skill-tag">Embedded Systems</span>
-          <span class="skill-tag">Signal Processing</span>
-        </div>
+        <h4>Hardware</h4>
+        <ul class="skill-list">
+          <li>Raspberry Pi / Embedded</li>
+          <li>Circuit Design</li>
+          <li>Mechatronics</li>
+          <li>LTSpice Simulation</li>
+          <li>Cadence Virtuoso</li>
+          <li>Verilog / SystemVerilog</li>
+          <li>3D Printing / CAD</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h4>ML &amp; Signal</h4>
+        <ul class="skill-list">
+          <li>Machine Learning</li>
+          <li>Deep Learning</li>
+          <li>Computer Vision</li>
+          <li>Signal Processing</li>
+          <li>Feature Engineering</li>
+          <li>TensorFlow / Keras</li>
+          <li>NumPy / SciPy</li>
+          <li>Data Analysis</li>
+        </ul>
       </div>
     </div>
 
